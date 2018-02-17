@@ -1,6 +1,9 @@
 package week1.day1;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +23,7 @@ public class LearnDropDown {
 		driver.get("https://www.irctc.co.in/eticketing/userSignUp.jsf");
 		//WebElement securityQ = driver.findElementById("userRegistrationForm:securityQ");
 		Select dd = new Select(
-		driver.findElementById("userRegistrationForm:securityQ"));
+		driver.findElementById("userRegistrationForm:securityAnswer"));
 		/*dd.selectByIndex(2);
 		Thread.sleep(3000);
 		dd.selectByValue("4");
@@ -28,19 +31,13 @@ public class LearnDropDown {
 		dd.selectByVisibleText("What is your fathers middle name?");
 		*/
 		List<WebElement> allOptions = dd.getOptions();
-		/*int count = allOptions.size();
+		String text2 = allOptions.get(2).getText();
+		int count = allOptions.size();
 		System.out.println(count);
-		dd.selectByIndex(count-1);*/
+		dd.selectByIndex(count-1);
 		for (WebElement eachOption : allOptions) {
 			String text = eachOption.getText();
 			System.out.println(text);
-		}
-		
-		
-		
-		
-		
-		
+		}				
 	}
-
 }
