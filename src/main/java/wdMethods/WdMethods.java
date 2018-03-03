@@ -8,8 +8,8 @@ public interface WdMethods {
 		
 	
 		/**
-		 * This method will launch the browser and 
-		 * maximize the browser and set the wait for 30 seconds 
+		 * This method will launch the chrome browser and 
+		 * maximise the browser and set the wait for 30 seconds 
 		 * and load the url
 		 * @author Babu - TestLeaf
 		 * @param browser - This will load the specified browser
@@ -35,7 +35,7 @@ public interface WdMethods {
 		public WebElement locateElement(String locValue) ;	
 		
 		/**
-		 * This method will clear and enter the value in the given text field 
+		 * This method will enter the value in the given text field 
 		 * @param ele   - The Webelement (text field) in which the data to be entered
 		 * @param data  - The data to be sent to the webelement
 		 * @author Babu - TestLeaf
@@ -49,13 +49,6 @@ public interface WdMethods {
 		 * @author Babu - TestLeaf
 		 */
 		public void click(WebElement ele);
-		
-		/**
-		 * This method will click the element 
-		 * @param ele   - The Webelement (button/link/element) to be clicked
-		 * @author Babu - TestLeaf
-		 */
-		public void clickWithoutSnap(WebElement ele);
 
 		/**
 		 * This method will get the text of the element
@@ -186,3 +179,6 @@ public interface WdMethods {
 		public void closeAllBrowsers();
 
 }
+
+
+

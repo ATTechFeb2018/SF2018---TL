@@ -2,24 +2,29 @@ package week1.day1;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class Login {
-
-	public static void main(String[] args) throws InterruptedException {
+	
+	//@Test(invocationCount=2,threadPoolSize=2)
+	//@Test(invocationCount=2,invocationTimeOut=10000)
+	@Test(invocationCount=2,timeOut=15000)
+	public void login() throws InterruptedException {
 		//load driver path
 		System.setProperty("webdriver.chrome.driver",
 				"./drivers/chromedriver.exe");
 		//launch browser
 		ChromeDriver driver = new ChromeDriver();
 
-		//maximize the browser
+		 	//maximize the browser
 		driver.manage().window().maximize();
+		//throw new RuntimeException();
 
 		//load url
 		driver.get("http://leaftaps.com/opentaps");
 		//enter UserName
 		driver.findElementById("username").sendKeys("DemoSalesManager",Keys.TAB);          
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		//enter Password
 		driver.findElementById("password").sendKeys("crmsfa");
 		//click login

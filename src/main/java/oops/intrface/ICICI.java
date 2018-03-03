@@ -16,14 +16,13 @@ public class ICICI implements RBI{
 	}
 
 
-	@Override
 	public void noMorethan15K() {
 		// TODO Auto-generated method stub
 		
 	}
 
 
-	@Override
+	
 	public int maxDep(String type) {
 		// TODO Auto-generated method stub
 		return 0;

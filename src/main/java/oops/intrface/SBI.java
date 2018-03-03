@@ -13,7 +13,7 @@ public class SBI implements RBI, MEA{
 
 	}	
 
-	@Override
+	
 	public void noMorethan15K() {
 		// TODO Auto-generated method stub
 	}
@@ -22,13 +22,13 @@ public class SBI implements RBI, MEA{
 
 	}
 
-	@Override
+	
 	public void controlExchangeRate() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public int maxDep(String type) {
 		// TODO Auto-generated method stub
 		return 0;

@@ -1,6 +1,9 @@
 package testCases;
 
+import java.util.NoSuchElementException;
+
 import org.junit.Test;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
 import wdMethods.SeMethods;
@@ -8,11 +11,12 @@ import wdMethods.SeMethods;
 public class Login extends SeMethods{
 	
 	@Test
-	public void login() {
-		
+	public void login()  {
+		takeSnap();
 		startApp("chrome", "http://leaftaps.com/opentaps");
 		
-		WebElement userName = locateElement("username");
+		WebElement userName = locateElement("id", "username1");
+	
 		type(userName, "DemoSalesManager");
 		
 		WebElement password = locateElement("password");
