@@ -1,13 +1,15 @@
 package leaf.Lead;
 
-import org.junit.Test;
+
+
+import org.testng.annotations.Test;
 
 import wdMethods.ProjectMethods;
 
 public class EditLead extends ProjectMethods{
 
-	@Test
-	public void createLead() throws InterruptedException {
+	@Test(groups = {"smoke"})
+	public void editLead() throws InterruptedException {
 		click(locateElement("linkText", "Leads"));
 		click(locateElement("linkText", "Find Leads"));
 		type(locateElement("xpath", "(//input[@name='firstName'])[3]"), "Gopinath");

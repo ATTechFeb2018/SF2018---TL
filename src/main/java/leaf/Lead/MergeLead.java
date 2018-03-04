@@ -1,13 +1,15 @@
 package leaf.Lead;
 
-import org.junit.Test;
+
+
+import org.testng.annotations.Test;
 
 import wdMethods.ProjectMethods;
 
 public class MergeLead extends ProjectMethods{
 
-	@Test
-	public void createLead() throws InterruptedException {
+	@Test(groups = {"sanity"},dependsOnGroups = {"smoke"})
+	public void mergeLead() throws InterruptedException {
 		click(locateElement("linkText", "Leads"));
 		click(locateElement("linkText", "Merge Leads"));
 		click(locateElement("xpath", "(//img[@alt='Lookup'])[1]"));

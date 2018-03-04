@@ -1,12 +1,14 @@
 package leaf.Lead;
 
-import org.junit.Test;
+
+
+import org.testng.annotations.Test;
 
 import wdMethods.ProjectMethods;
 
 public class DeleteLead extends ProjectMethods{
 
-	@Test
+	@Test(groups = {"sanity"},dependsOnGroups = {"smoke"})
 	public void deleteLead() throws InterruptedException {
 		click(locateElement("linkText", "Leads"));
 		click(locateElement("linkText", "Find Leads"));

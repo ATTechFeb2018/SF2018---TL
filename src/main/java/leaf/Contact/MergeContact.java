@@ -1,6 +1,8 @@
 package leaf.Contact;
 
-import org.junit.Test;
+
+
+import org.testng.annotations.Test;
 
 import wdMethods.ProjectMethods;
 

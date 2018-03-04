@@ -1,13 +1,15 @@
 package leaf.Lead;
 
-import org.junit.Test;
+
+
+import org.testng.annotations.Test;
 
 import wdMethods.ProjectMethods;
 
 public class DublicateLead extends ProjectMethods{
 
-	@Test
-	public void createLead() throws InterruptedException {
+	@Test(groups = {"regression","smoke"},dependsOnGroups = {"sanity"})
+	public void dublicateLead() throws InterruptedException {
 		click(locateElement("linkText", "Leads"));
 		click(locateElement("linkText", "Find Leads"));
 		click(locateElement("xpath", "//span[contains(text(),'Phone')]"));
