@@ -10,7 +10,6 @@ public class CreateContact extends ProjectMethods{
 	
 	@Test
 	public void createContact() {
-		login();
 		click(locateElement("linkText", "Contacts"));
 		click(locateElement("linkText", "Create Contact"));
 		type(locateElement("id", "firstNameField"), "TestLeaf");
